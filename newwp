@@ -1,0 +1,36 @@
+#!/bin/zsh
+CONFIGDIR=$(dirname "$0")/config
+source $CONFIGDIR/variables.sh
+source $CONFIGDIR/serveurIndex.sh
+
+
+databaseCreate(){
+    sudo mysql -e "CREATE DATABASE $dbname /*\!40100 DEFAULT CHARACTER SET utf8 */;"
+    sudo mysql -e "CREATE USER $userDBname@$serveur IDENTIFIED BY 'pass';"
+    sudo mysql -e "GRANT ALL PRIVILEGES ON $dbname.* TO '$userDBname'@'$serveur';"
+    sudo mysql -e "FLUSH PRIVILEGES;"
+}
+
+if [ $1 ]
+  then
+    echo "Création du wordpress $projectname dans le dossier courant / $projectname"
+    cd $dossierServeur
+    pwd
+    echo "Téléchargement de WP et décompression"
+    wget https://fr.wordpress.org/latest-fr_FR.zip
+    unzip latest-fr_FR.zip
+    mv wordpress $projectname
+    echo "Suppression du zip"
+    rm latest-fr_FR.zip
+    cd $dossierServeur/$projectname
+    pwd
+    echo "Create Config File"
+    cp wp-config-sample.php wp-config.php
+    sed -i "s/votre_nom_de_bdd/$dbname/g ; s/votre_utilisateur_de_bdd/$userDBname/g ; s/votre_mdp_de_bdd/pass/g" $dossierServeur/$projectname/wp-config.php
+    echo "Create DB"
+    databaseCreate
+    createLinkOrFile
+    $navigateur --new-window $serveur:$port/lv1_index.php &
+  else
+    echo "Veuillez entre le nom du projet (sans espace)"
+  fi
