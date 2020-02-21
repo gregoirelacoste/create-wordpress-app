@@ -1,6 +1,6 @@
 #!/bin/zsh
-HEADERFILE=$dossierServeur/lv1_header.php
-INDEXFILE=$dossierServeur/lv1_index.php
+HEADERFILE=$dossierLocal/lv1_header.php
+INDEXFILE=$dossierLocal/lv1_index.php
 nouveaulien="<li><a href='$projectname'>Wordpress $projectname</a></li>"
 
 indexcontent="<html>
@@ -17,9 +17,6 @@ indexcontent="<html>
 headercontent="<ul>$nouveaulien</ul>"
 
 createLinkOrFile(){
-	cd $dossierServeur
-	echo $HEADERFILE
-	pwd
 	if [ -f "$HEADERFILE" ]
 		then
 		    echo "Ajout du lien dans $HEADERFILE"
