@@ -43,6 +43,7 @@ createTheme(){
   echo $header >> header.php
   echo $footer >> footer.php
   echo $functionsPHP >> functions.php
+  wp theme activate $themeName
   cd ../
   rm -rf twentynineteen twentyseventeen twentytwenty
 }

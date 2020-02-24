@@ -5,6 +5,7 @@ dossierLocal=/home/$USER/dev/lamp
 serveur=localhost
 port=7777
 navigateur=firefox
+BINCLIPATH=/home/$USER/bin
 #DB config
 dbname=wpdb_$projectname
 userDBname=user_$projectname
@@ -14,7 +15,7 @@ wpUserPass="pass"
 wpUserEmail=g@lv1.fr
 blog_public=0
 #Plugins
-plugins=(https://downloads.wordpress.org/plugin/wordpress-seo.13.1.zip https://downloads.wordpress.org/plugin/contact-form-7.5.1.6.zip)
+plugins=(wordpress-seo contact-form-7)
 #Theme
 URI="https://lv1.fr"
 descriptionTheme="Theme par lv1"

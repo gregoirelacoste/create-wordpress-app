@@ -5,6 +5,7 @@ source $CONFIGDIR/downloadWP.sh
 source $CONFIGDIR/serveurIndex.sh
 source $CONFIGDIR/createDatabase.sh
 source $CONFIGDIR/installWP.sh
+source $CONFIGDIR/installWPCli.sh
 source $CONFIGDIR/installPlugins.sh
 source $CONFIGDIR/createTheme.sh
 
@@ -17,6 +18,7 @@ if [ $1 ]
     createLinkOrFile
     echo "Create InstallWP"
     installWP
+    installWPCli
     installPlugins
     createTheme
     $navigateur --new-window $serveur:$port/lv1_index.php &
