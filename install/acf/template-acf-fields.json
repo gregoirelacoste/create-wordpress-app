@@ -1,0 +1,20 @@
+{
+  "key": "key_tpl",
+  "label": "label_tpl",
+  "name": "name_tpl",
+  "type": "type_tpl",
+  "instructions": "instructions_tpl",
+  "required": 0,
+  "conditional_logic": 0,
+  "wrapper": {
+    "width": "",
+    "class": "",
+    "id": ""
+  },
+  "default_value": "",
+  "tabs": "all",
+  "toolbar": "full",
+  "media_upload": 1,
+  "delay": 0
+}
+

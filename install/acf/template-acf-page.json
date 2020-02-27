@@ -1,0 +1,22 @@
+{
+  "key": "key_tpl",
+  "title": "title_tpl",
+  "location": [
+    [
+      {
+        "param": "page",
+        "operator": "==",
+        "value": "id_tpl"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "acf_after_title",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "fields": []
+}

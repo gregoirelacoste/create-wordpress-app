@@ -1,0 +1,39 @@
+{
+  "project_name": "$projectname",
+  "server":{
+    "url": "localhost",
+    "port": 7777
+  },
+  "database": {
+    "name": "lvdb_$projectname",
+    "user": "user_$projectname",
+    "password": "pass"
+  },
+  "wordpress": {
+    "install" : {
+      "user": "user_$projectname",
+      "password": "pass",
+      "email": "g@lv1.fr",
+      "blog_public": 0
+    },
+    "theme": {
+      "name": "theme_$projectname",
+      "author_url": "https://lv1.fr",
+      "description": "Theme par lv1"
+    },
+    "plugins": ["wordpress-seo", "contact-form-7", "advanced-custom-fields"],
+    "pages": ["Accueil", "Contact", "À propos", "Services", "Portfolio"],
+    "ACF_groups": [
+      {
+        "title": "$page_name",
+        "fields": [
+          {
+            "type": "text",
+            "label":"$page_name",
+            "instructions": "SVP Veuillez remplir la description"
+          }
+        ]
+      }
+    ]
+  }
+}

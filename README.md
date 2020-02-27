@@ -42,5 +42,17 @@ descriptionTheme="Theme par lv1"
 themeName=$projectname"_theme"
 ```
 
+## DEPENDENCIES
+###JQ
+Download jq
+
+jq is written in C and has no runtime dependencies, so it should be possible to build it for nearly any platform. Prebuilt binaries are available for Linux, OS X and Windows.
+
+- jq 1.5 is in the official Debian and Ubuntu repositories. Install using ```sudo apt-get install jq```.
+- jq 1.5 is in the official Fedora repository. Install using ```sudo dnf install jq```.
+- jq 1.4 is in the official openSUSE repository. Install using ```sudo zypper install jq```.
+- jq 1.5 is in the official Arch repository. Install using ```sudo pacman -Sy jq```.
+
+
 Any question or suggestion ? g@lv1.fr
 ####g@lv1.fr

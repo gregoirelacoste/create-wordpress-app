@@ -2,12 +2,15 @@ installWPCli(){
   echo "WP CLI n'est pas encore installé, installation en cours"
   curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
   chmod +x wp-cli.phar
-  mv wp-cli.phar $BINCLIPATH/wp
+  mkdir $PROJECTDIR/wp
+  mv wp-cli.phar $PROJECTDIR/wp
 }
 
-if type wp
-  then
-    echo "WP CLI est déjà installé"
-  else
-    installWPCli
-  fi
+wpcli(){
+  if type $PROJECTDIR/wp
+    then
+      echo "WP CLI est déjà installé"
+    else
+      installWPCli
+    fi
+}

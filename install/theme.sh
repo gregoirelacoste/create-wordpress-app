@@ -20,6 +20,7 @@ footer="<?php wp_footer(); ?>
 </body>
 </html>"
 
+
 header='<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -31,11 +32,10 @@ header='<!DOCTYPE html>
 <?php wp_body_open(); ?>'
 
 createTheme(){
-  cd $dossierLocal/$projectname/wp-content/themes
-  pwd
-  mkdir $themeName
-  cd $themeName
-  echo "Creation du thème $themeName"
+  createPage
+  mkdir $dir/`conf project_name`/wp-content/themes/`conf wordpress.theme.name`
+  cd $dir/`conf project_name`/wp-content/themes/`conf wordpress.theme.name`
+  echo "Creation du thème `conf wordpress.theme.name`"
   touch style.css index.php header.php footer.php functions.php
   mkdir img js css
   echo $styleCSS >> style.css

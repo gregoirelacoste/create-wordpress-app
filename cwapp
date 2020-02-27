@@ -1,0 +1,13 @@
+#!/bin/zsh
+source $(dirname "$0")/install/main.sh
+
+if [ $1 == "init" ]
+  then
+    echo "creation du fichier de configuration"
+    cp config.json ./
+elif [ $1 == "install" ]
+  then
+    install
+else
+  echo "merci d'entrer une commande"
+fi
