@@ -12,7 +12,7 @@
     "prefix": "lv_"
   },
   "wordpress": {
-    "url": "lv1.fr",
+    "url": "localhost",
     "title": "$projectname",
     "debug": true,
     "install" : {

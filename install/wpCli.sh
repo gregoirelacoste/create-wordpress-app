@@ -5,7 +5,7 @@ installWPCli(){
 }
 
 wpcli(){
-  if type $PROJECTDIR/wp
+  if type $PROJECTDIR/wp-cli.phar
     then
       echo "WP CLI est déjà installé"
     else

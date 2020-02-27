@@ -10,7 +10,7 @@ if [ $1 = "init" ]
   elif [ $1 = "install" ]
     then
       install
-  elif [ $1 = start ]
+  elif [ $1 = "start" ]
     then
       wp server --host=`conf server.host` --port=`conf server.port`
   elif [ $1 = "-h" ]
