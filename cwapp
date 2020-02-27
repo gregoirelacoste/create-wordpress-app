@@ -1,13 +1,21 @@
 #!/bin/zsh
-source $(dirname "$0")/install/main.sh
+CWAPPDIR=$(dirname "$0")
+source $CWAPPDIR/var.sh
+source $CWAPPDIR/install/main.sh
+source $CWAPPDIR/init/main.sh
 
-if [ $1 == "init" ]
+if [ $1 = "init" ]
   then
-    echo "creation du fichier de configuration"
-    cp config.json ./
-elif [ $1 == "install" ]
-  then
-    install
-else
-  echo "merci d'entrer une commande"
-fi
+    init $2
+  elif [ $1 = "install" ]
+    then
+      install
+  elif [ $1 = start ]
+    then
+      wp server --host=`conf server.host` --port=`conf server.port`
+  elif [ $1 = "-h" ]
+    then
+      cat $CWAPPDIR/help.md
+  else
+    echo "merci d'entrer une commande"
+  fi

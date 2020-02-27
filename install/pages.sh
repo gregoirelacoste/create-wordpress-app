@@ -1,4 +1,4 @@
-createPage(){
+createPages(){
   if ls $themeFolder/acf
     then
       echo "exist"

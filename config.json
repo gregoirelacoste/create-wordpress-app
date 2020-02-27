@@ -1,24 +1,31 @@
 {
   "project_name": "$projectname",
   "server":{
-    "url": "localhost",
-    "port": 7777
+    "host": "localhost",
+    "port": 8080
   },
   "database": {
     "name": "lvdb_$projectname",
     "user": "user_$projectname",
-    "password": "pass"
+    "password": "pass",
+    "host": "localhost",
+    "prefix": "lv_"
   },
   "wordpress": {
+    "url": "lv1.fr",
+    "title": "$projectname",
+    "debug": true,
     "install" : {
       "user": "user_$projectname",
       "password": "pass",
       "email": "g@lv1.fr",
-      "blog_public": 0
+      "blog_public": 0,
+      "lang": "fr_FR"
     },
     "theme": {
       "name": "theme_$projectname",
-      "author_url": "https://lv1.fr",
+      "author": "author_$projectname",
+      "author_url": "lv1.fr (sans http)",
       "description": "Theme par lv1"
     },
     "plugins": ["wordpress-seo", "contact-form-7", "advanced-custom-fields"],

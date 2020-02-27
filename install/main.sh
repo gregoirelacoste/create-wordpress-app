@@ -1,26 +1,15 @@
-source ./downloadWPsh
-source ./serveurIndexsh
-source ./createDatabasesh
-source ./installWPsh
-source ./installWPClish
-source ./installPluginssh
-source ./createThemesh
-
-dir=`pwd`
-conf(){
-  cat config.json | jq -r ".$1"
-}
+source $CWAPPINSTALL/coreWP.sh
+source $CWAPPINSTALL/database.sh
+source $CWAPPINSTALL/wpCli.sh
+source $CWAPPINSTALL/plugins.sh
+source $CWAPPINSTALL/theme.sh
 
 install(){
-  echo "Création du wordpress `conf project_name` dans le dossier $dir'/'`conf project_name` "
-  downloadWP
-  echo "Create Create DB"
-  databaseCreate
-  # serverIndex
-  echo "InstallWP"
-  installWP
-  installWPCli
+  echo "Création du wordpress `conf project_name` dans le dossier $PROJECTDIR "
+  wpcli
+  createDatabase
+  installCoreWP
   installPlugins
   createTheme
-  echo "Veuillez entre le nom du projet (sans espace)"
+  #createPages
 }
