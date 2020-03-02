@@ -2,49 +2,27 @@
 bash script to generate a wordpress website
 
 ####What does it do ?
-* Download and Install wordpress in FRENCH
-* Create default user
+* Download and Install wordpress in language you want
+* Create default user and pass and config...
 * Create database and user database
 * Install WP CLI
+* Use WP CLI server
 * Install and activate plugins you choose
 * Install a template boilerplate
-* create lv1_index.php (root file to list all your wordpress)
+* Generate Advanced Custom fields for template you choose (soon)
+* Install ACF cli with auto import JSON ACF
 
-You only have one file to check : 
-##config/variables.sh 
-```
-#Local Config
-projectname= Name of your project (db, user and theme also)
-dossierLocal=Local directory for your wp
-serveur=localhost
-port=7777 (by default)
-navigateur=firefox
-BINCLIPATH=Determine where you want to install CLI WP (in your executable bash folder : example /home/$USER/bin)
-
-#DB config
-dbname=wpdb_$projectname
-userDBname=user_$projectname
-
-#WP site config
-wpUserName=$userDBname
-wpUserPass="pass"
-wpUserEmail=g@lv1.fr
-blog_public=0
-
-#Plugins
-Place your plugin to install and activate, name of plugin separate by space
-plugins=(wordpress-seo contact-form-7)
-
-#Theme
-We create an empty theme, these is the data for style.css
-URI="https://lv1.fr"
-descriptionTheme="Theme par lv1"
-themeName=$projectname"_theme"
-```
+### How it work ? 
+- first install CLI in your $PATH
+- go in your project folder
+- ```cwapp init [projectname]``` to generate a config file for your project
+- when config file is ok run ```cwapp install```, lets the magic happend...
+- start server ```cwapp start```
+- help ```cwap -h```
 
 ## DEPENDENCIES
 ###JQ
-Download jq
+You have to download jq (json utilities for bash)
 
 jq is written in C and has no runtime dependencies, so it should be possible to build it for nearly any platform. Prebuilt binaries are available for Linux, OS X and Windows.
 
