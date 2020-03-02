@@ -3,7 +3,12 @@ generateFile(){
   cp $CWAPPDIR/config.json ./$cwapp_config
   if [ $1 ]
     then
-      sed -i "s/\$projectname/$1/g" $cwapp_config
+      if [[ "$OSTYPE" == "darwin"* ]]
+        then
+          sed -i '' "s/\$projectname/$1/g" $cwapp_config
+        else
+          sed -i "s/\$projectname/$1/g" $cwapp_config
+        fi
     fi
 }
 
