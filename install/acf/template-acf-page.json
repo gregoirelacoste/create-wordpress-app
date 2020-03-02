@@ -18,5 +18,7 @@
   "hide_on_screen": "",
   "active": true,
   "description": "",
-  "fields": []
+  "fields": [
+    "fields_page_changeid"
+  ]
 }

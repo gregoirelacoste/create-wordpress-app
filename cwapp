@@ -16,6 +16,12 @@ if [ $1 = "init" ]
   elif [ $1 = "-h" ]
     then
       cat $CWAPPDIR/help.md
+  elif [ $1 = "acf" ] && [ $2 = "-h" ]
+    then
+      cat $CWAPPDIR/install/acf/help.md
+  elif [ $1 = "page" ] && [ $2 = "-h" ]
+    then
+      cat $CWAPPDIR/page/help.md
   else
     echo "merci d'entrer une commande"
   fi

@@ -3,6 +3,8 @@ source $CWAPPINSTALL/database.sh
 source $CWAPPINSTALL/wpCli.sh
 source $CWAPPINSTALL/plugins.sh
 source $CWAPPINSTALL/theme.sh
+source $CWAPPINSTALL/pages.sh
+source $CWAPPINSTALL/acf.sh
 
 install(){
   echo "Création du wordpress `conf project_name` dans le dossier $PROJECTDIR "
@@ -11,5 +13,6 @@ install(){
   installCoreWP
   installPlugins
   createTheme
-  #createPages
+  createPages
+  acfCli
 }

@@ -29,17 +29,45 @@
       "description": "Theme par lv1"
     },
     "plugins": ["wordpress-seo", "contact-form-7", "advanced-custom-fields"],
-    "pages": ["Accueil", "Contact", "À propos", "Services", "Portfolio"],
-    "ACF_groups": [
+    "pages": [
       {
-        "title": "$page_name",
-        "fields": [
+        "title": "Accueil",
+        "templatePhp": "find template listing with cwapp page -h",
+        "frontPage": true,
+        "acf_fields": [
+          {
+            "type": "text",
+            "label":"Titre",
+            "name": "name_tpl",
+            "instructions": "SVP Veuillez remplir le titre"
+          },
+          {
+            "type": "wisywig",
+            "label":"Contetnu",
+            "name": "name_tpl",
+            "instructions": "SVP Veuillez remplir le titre"
+          }
+        ]
+      },
+      {
+        "title": "Contact",
+        "templatePhp": "page",
+        "acf_fields": [
           {
             "type": "text",
             "label":"$page_name",
             "instructions": "SVP Veuillez remplir la description"
           }
         ]
+      },
+      {
+        "title": "A propos"
+      },
+      {
+        "title": "Services"
+      },
+      {
+        "title": "Portfolio"
       }
     ]
   }
