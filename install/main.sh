@@ -9,8 +9,7 @@ source $CWAPPINSTALL/acf.sh
 install(){
   echo "Création du wordpress `conf project_name` dans le dossier $PROJECTDIR "
   wpcli
-  createDatabase
-  installCoreWP
+  createDatabase && installCoreWP
   installPlugins
   createTheme
   createPages

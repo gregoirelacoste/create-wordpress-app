@@ -28,7 +28,7 @@ localMysql(){
 dockerMysql(){
   echo "docker-compose"
   touch docker-compose.yml && echo $dockerComposeContent > docker-compose.yml
-  docker-compose up -d
+  docker-compose up -d && echo "docker start ok"
 }
 
 createDatabase(){

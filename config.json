@@ -34,26 +34,24 @@
     "pages": [
       {
         "title": "Accueil",
-        "templatePhp": "find template listing with cwapp page -h",
+        "templatePhp": "front-page.php",
         "frontPage": true,
         "acf_fields": [
           {
             "type": "text",
             "label":"Titre",
-            "name": "name_tpl",
             "instructions": "SVP Veuillez remplir le titre"
           },
           {
             "type": "wysywig",
             "label":"Contenu",
-            "name": "name_tpl",
             "instructions": "SVP Veuillez remplir le titre"
           }
         ]
       },
       {
         "title": "Contact",
-        "templatePhp": "page",
+        "templatePhp": "page.php",
         "acf_fields": [
           {
             "type": "text",
