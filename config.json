@@ -8,7 +8,9 @@
     "name": "lvdb_$projectname",
     "user": "user_$projectname",
     "password": "pass",
-    "host": "localhost",
+    "host": "127.0.0.1",
+    "docker": true,
+    "port": 3306,
     "prefix": "lv_"
   },
   "wordpress": {
@@ -42,8 +44,8 @@
             "instructions": "SVP Veuillez remplir le titre"
           },
           {
-            "type": "wisywig",
-            "label":"Contetnu",
+            "type": "wysywig",
+            "label":"Contenu",
             "name": "name_tpl",
             "instructions": "SVP Veuillez remplir le titre"
           }
