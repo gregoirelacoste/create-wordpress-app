@@ -1,7 +1,7 @@
-#create-wordpress-app
+# create-wordpress-app
 bash script to generate a wordpress website
 
-####What does it do ?
+#### What does it do ?
 * Download and Install wordpress in language you want
 * Create default user and pass and config...
 * Create database and user database
@@ -21,7 +21,7 @@ bash script to generate a wordpress website
 - help ```cwap -h```
 
 ## DEPENDENCIES
-###JQ
+### JQ
 You have to download jq (json utilities for bash)
 
 jq is written in C and has no runtime dependencies, so it should be possible to build it for nearly any platform. Prebuilt binaries are available for Linux, OS X and Windows.
@@ -33,4 +33,4 @@ jq is written in C and has no runtime dependencies, so it should be possible to 
 
 
 Any question or suggestion ? g@lv1.fr
-####g@lv1.fr
+#### g@lv1.fr
